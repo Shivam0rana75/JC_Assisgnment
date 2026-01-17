@@ -8,15 +8,15 @@ import Card from '@/components/card';
 import Medicine from '@/public/images/ProvideMedicine.jpg';
 import Support from '@/public/images/Support.jpg';
 export default function Home() {
-  const item1=[{title:"Rescuing and nursing stray Animals", image: Dog , id:1},
+  const item1=[{title:"Rescuing and nursing stray Animals", image: Dog , id:1 },
               {title:"Providing medical aid to homeless people", image: Homeless , id:2},
               {title:"Funding healthcare expenses for the needy", image: Funding , id:3}
   ];
-  const item2=[{title:"Volunteer with us", image: Volunteer , id:10},
-              {title:"Donate for a cause", image: Donate , id:20},
-              {title:"Provide medicines or supplies", image: Medicine , id:30}
+  const item2=[{title:"Volunteer with us", image: Volunteer , id:10 , href:'/Volunteer'},
+              {title:"Donate for a cause", image: Donate , id:20 , href:'/Donate'},
+              {title:"Provide medicines or supplies", image: Medicine , id:30, href:'/ProvideSupplies'}
   ];
-  const item3=[{title:"24/7 Emergency Support", image: Support , id:100}];
+  const item3=[{title:"24/7 Emergency Support", image: Support , id:100 , href:'/Support'}];
   return (
     <main className={classes.home}>
       <div className={classes.description}>
@@ -57,7 +57,9 @@ export default function Home() {
           <h1>Our Services</h1>
         </div>
         
-        <Card items={item1} />
+          <Card items={item1} />
+        
+        
       </div>
 
       <div className={classes.joinus}>
